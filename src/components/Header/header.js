@@ -1,22 +1,27 @@
-import React from 'react'
-import './Header.css'
-import Logo from "../../assets/resume.svg";
+import React from "react";
+import resumeSvg from "../../assets/resume.svg";
+import styles from "./Header.module.css";
+
+
 function Header() {
   return (
-    <div className='container'>
-        <div className='left'>
-        <p className='heading'>
-            A <span>Resume</span> that stands out!
+    <div>
+  <div className={styles.container}>
+      <div className={styles.left}>
+        <p className={styles.heading}>
+          A <span>Resume</span> that stands out!
         </p>
-        <p className='heading'>
-            Make your own resume.<span>It's free</span>
+        <p className={styles.heading}>
+          Make your own resume. <span>It's free</span>
         </p>
+      </div>
+      <div className={styles.right}>
+        <img src={resumeSvg} alt="Resume" />
+      </div>
     </div>
-    <div className='right'>
-        <img src={Logo} alt='Resume'/>
-    </div>
-    </div>
-  )
+</div>
+    
+  );
 }
 
-export default Header
+export default Header;
